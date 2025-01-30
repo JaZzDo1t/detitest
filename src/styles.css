@@ -1,0 +1,171 @@
+/* Сброс стилей */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Подбираем детский, весёлый шрифт (см. index.html) */
+body {
+  font-family: "Nunito", sans-serif;
+  background: #fffbee;
+  color: #333;
+  padding: 1rem;
+}
+
+/* Контейнер */
+.app-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+/* Шапка */
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.header h1 {
+  font-size: 1.8rem;
+  color: #ff6464;
+}
+.header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* schedule-block */
+.schedule-block {
+  background: #fff;
+  border: 2px solid #f6cf67;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden; /* чтобы скругления были видны */
+  transition: all 0.3s ease;
+}
+
+.schedule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  background: #ffd965;
+  /* Лёгкая тень, чтобы «подсветить» заголовок */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid #f6cf67;
+}
+.schedule-header:hover {
+  background: #ffd54c;
+}
+
+/* Заголовок в блоке */
+.schedule-header h2 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0.2rem;
+}
+
+/* Время */
+.schedule-header .time {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Кнопка сворачивания */
+.toggle-btn {
+  background: #ff6464;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.toggle-btn:hover {
+  background: #ff4a4a;
+}
+.toggle-btn:active {
+  transform: scale(0.9);
+}
+
+/* Контент внутри блока (раскрывающийся) */
+.schedule-content {
+  padding: 1rem;
+  background: #fffbee;
+}
+
+/* Общие списки */
+.objectives ul,
+.instructions ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Дочерние блоки */
+.child-block {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+}
+
+/* Цвет для Лизы */
+.liza-block {
+  background: #ffe7f0; /* розоватый */
+  border: 2px dashed #ff91b8;
+}
+
+/* Цвет для Алисы */
+.alisa-block {
+  background: #e8f5ff; /* голубоватый */
+  border: 2px dashed #89d2ff;
+}
+
+/* Списки задач */
+.child-block ul {
+  list-style-type: none; /* убираем стандартные маркеры */
+  margin-left: 0; /* сбрасываем отступ */
+  margin-top: 0.5rem;
+}
+
+/* Строка задачи */
+.child-block li {
+  margin-bottom: 0.5rem;
+}
+
+/* Если задача выполнена */
+.done-task span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Чекбокс и подпись */
+.child-block input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 1.4rem;
+  }
+  .toggle-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+  }
+  .schedule-header {
+    padding: 0.5rem 0.8rem;
+  }
+  .schedule-block {
+    margin-bottom: 0.8rem;
+  }
+  .schedule-content {
+    padding: 0.8rem;
+  }
+}
